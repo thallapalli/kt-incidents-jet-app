@@ -1,6 +1,20 @@
 <div class="oj-hybrid-padding">
   <h1>Product Information</h1>
   <div>
+      <h3><oj-label for="activitiesList">Activities</oj-label></h3>
+      <oj-list-view id="activitiesList" style="font-size: 18px" data="[[activityDataProvider]]">
+          <template slot="itemTemplate">
+               <div>
+          <strong>
+            <oj-bind-text value="[[$current.data.name]]"></oj-bind-text>
+          </strong>
+        </div>
+      </template>
+    </oj-list-view>
+  </div>
+  <div>
+       <h3><oj-label for="basicSelect">Item Details</oj-label></h3>
+  <hr style="margin-top:12px;">
     <oj-label for="basicSelect">Select Chart:</oj-label>
     <oj-select-single id="basicSelect"
                       style="max-width:20em"

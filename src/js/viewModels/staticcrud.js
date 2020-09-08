@@ -1,10 +1,7 @@
-define(
-  ['accUtils',
-   'knockout',
-  'ojs/ojbootstrap', 'ojs/ojarraydataprovider', 'ojs/ojbufferingdataprovider', 'ojs/ojkeyset', 'ojs/ojcontext', 'ojs/ojknockout', 'ojs/ojinputtext',
-  'ojs/ojinputnumber', 'ojs/ojtable', 'ojs/ojlabel', 'ojs/ojvalidationgroup', 'ojs/ojformlayout', 'ojs/ojtoolbar', 'ojs/ojmessages'
-  ],
-  function (accUtils, ko, Bootstrap, ArrayDataProvider, BufferingDataProvider, KeySet, Context) {
+  require(['knockout', 'ojs/ojbootstrap', 'ojs/ojarraydataprovider', 'ojs/ojbufferingdataprovider', 'ojs/ojkeyset', 'ojs/ojcontext', 'ojs/ojknockout', 'ojs/ojinputtext',
+  'ojs/ojinputnumber', 'ojs/ojtable', 'ojs/ojlabel', 'ojs/ojvalidationgroup', 'ojs/ojformlayout', 'ojs/ojtoolbar', 'ojs/ojmessages'],
+  function (ko, Bootstrap, ArrayDataProvider, BufferingDataProvider, KeySet, Context)
+  {
 
     function staticcrudViewModel() {
      var deptArray = [{ DepartmentId: 10, DepartmentName: 'Administration', LocationId: 100, ManagerId: 1001 },

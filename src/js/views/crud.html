@@ -1,50 +1,69 @@
-
-<div id="sampleDemo" style="" class="demo-padding demo-container">
-    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
-        <div id="tableDemo">
-            <oj-messages messages="[[messageArray]]"></oj-messages>
-            <div class="oj-flex">
-                <div class="oj-flex-item oj-web-padding">
-                    <oj-validation-group valid="{{groupValid}}">
-                        <oj-form-layout>
-                            <oj-input-number id="departmentIdInput" max="2000" min="0" label-hint="Department Id"
-                                             value="{{inputDepartmentId}}"></oj-input-number>
-                            <oj-input-text id="departmentNameInput" label-hint="Department Name" value="{{inputDepartmentName}}"></oj-input-text>
-                            <oj-input-number id="locationIdInput" label-hint="Location Id" max="2000" min="0"
-                                             value="{{inputLocationId}}"></oj-input-number>
-                            <oj-input-number id="managerIdInput" label-hint="Manager Id" max="2000" min="0"
-                                             value="{{inputManagerId}}"></oj-input-number>
-                        </oj-form-layout>
-                        <oj-toolbar chroming='outlined'>
-                            <oj-button id='addbutton' on-oj-action='[[addRow]]' disabled='[[disableCreate]]'>Create</oj-button>
-                            <oj-button id='updateButton' on-oj-action='[[updateRow]]' disabled='[[disableRemoveUpdate]]'>Update</oj-button>
-                            <oj-button id='removeButton' on-oj-action='[[removeRow]]' disabled='[[disableRemoveUpdate]]'>Remove</oj-button>
-
-                        </oj-toolbar>
-                    </oj-validation-group>
-                </div>
-                <div id='tableContainer' class="oj-flex-item oj-web-padding">
-                    <oj-table id="table" aria-label="Departments Table"
-                              class="demo-table-container"
-                              data='[[dataprovider]]'
-                              columns='[{"headerText": "Department Id", "field": "DepartmentId"},
-                              {"headerText": "Department Name", "field": "DepartmentName"},
-                              {"headerText": "Location Id", "field": "LocationId"},
-                              {"headerText": "Manager Id", "field": "ManagerId"}]'
-                              selection-mode.row='single'
-                              first-selected-row='{{firstSelected}}'
-                              on-first-selected-row-changed="[[firstSelectedRowChangedListener]]">
-                    </oj-table>
-
-                    <oj-toolbar chroming='outlined'>
-                        <oj-button id='resetButton' on-oj-action='[[resetRows]]' disabled='[[disableSubmit]]'>Reset Changes</oj-button>
-                        <oj-button id='submitButton' on-oj-action='[[submitRows]]' disabled='[[disableSubmit]]'>Submit Changes</oj-button>
-                    </oj-toolbar>
-                </div>
+<div id = "tableDemo" class = "oj-flex oj-flex-items-pad">
+    <div class = "oj-xl-8 oj-lg-8 oj-md-6 oj-flex-item">
+        <table id = "table" summary = "Contact List" aria-label = "Contacts Table"
+               data-bind = "ojComponent: {component: 'ojTable',
+                                   
+                                    data: datasource,    columnsDefault: {sortable: 'none' },
+                                    columns: [{headerText: 'Incident  Id',
+                                               field: 'incidentId'},
+                                              {headerText: 'Contact',
+                                               field: 'contact'},
+                                              {headerText: 'priority',
+                                               field: 'priority'},
+                                              {headerText: 'summary',
+                                               field: 'summary'}]} ">
+        </table>
+    </div>
+    <!--
+    <div class = "oj-xl-4 oj-lg-4 oj-md-6 oj-flex-item">
+        <div class = "oj-flex oj-flex-items-pad">
+            <div class = "oj-flex- deprecated-col-default-width ">
+                <label for =" spinnercontrol "> Incident Id </label>
             </div>
-            <div>
-
+            <div class = "oj-flex-item deprecated-col-default-width">
+                <input id = "incidentIdInput"
+                       data-bind = "ojComponent: {
+                       component: 'ojInputNumber',
+                       max: 2000, min: 0, step: 1, value: inputincidentId}" />
             </div>
         </div>
-    </div>
+        <div class = "oj-flex oj-flex-items-pad">
+            <div class = "oj-flex-item deprecated-col-default-width">
+                <label for = "inputcontrol"> Contact </label>
+            </ div>
+            <div class = "oj-flex-item deprecated-col-default-width">
+                <input id = "conatctInput"
+                       data-bind = "ojComponent: {
+                       component: 'ojInputText',
+                       value: inputFirstName} "/>
+            </div>
+        </div>
+        <div class =" oj-flex oj-flex-items-pad ">
+            <div class =" oj-flex-item deprecated-col-default-width " >
+                <label for = "spinnercontrol"> contact </label>
+            </div>
+            <div class = "oj-flex-item deprecated-col-default-width">
+                <input id = "inputpriority"
+                       data-bind = " ojComponent: {
+                       component: 'ojInputText',
+                       value: inputpriority} "/>
+            </div>
+        </div>
+        
+        <div class =" oj-flex oj -flex-items-pad ">
+            <button id =" addbutton "
+                    data-bind =" click: addRow,
+                    ojComponent: {component: 'ojButton', label: 'Add to end'} ">
+            </button>
+
+            <button id = "updateButton"
+                    data-bind = "click: updateRow,
+                    ojComponent: {component: 'ojButton', label: 'Update'}">
+            </button>
+            <button id = "removeButton"
+                    data-bind = "click : removeRow,
+                    ojComponent: {component: 'ojButton', label: 'Remove'} ">
+            </button>
+        </div>
+    </div>-->
 </div>

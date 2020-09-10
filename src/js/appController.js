@@ -37,6 +37,9 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojknockouttemplateutils',
         { path: 'dashboard', detail: { label: 'Dashboard', iconClass: 'oj-ux-ico-bar-chart' } },
        
         { path: 'staticcrud', detail: { label: 'StaticCrud', iconClass: 'oj-ux-ico-information-s' } },
+        //dummydonotdelete
+         { path: 'dummydonotdelete', detail: { label: 'Dummy', iconClass: 'oj-ux-ico-information-s' } },
+       
          { path: 'crud', detail: { label: 'Crud', iconClass: 'oj-ux-ico-information-s' } }
       ];
 

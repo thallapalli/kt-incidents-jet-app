@@ -1,6 +1,7 @@
-<div id = "tableDemo" class = "oj-flex oj-flex-items-pad">
-    <div class = "oj-xl-8 oj-lg-8 oj-md-6 oj-flex-item">
-        <table id = "table" summary = "Contact List" aria-label = "Contacts Table"
+
+<div class="oj-flex oj-flex-init oj-panel oj-panel-alt4">
+    <div class="oj-flex-item oj-sm-only-text-align-end oj-md-4 oj-sm-12 oj-panel oj-panel-alt1">
+         <table id = "table" summary = "Contact List" aria-label = "Contacts Table"
                data-bind = "ojComponent: {component: 'ojTable',
                                    
                                     data: datasource,    columnsDefault: {sortable: 'none' },
@@ -14,46 +15,44 @@
                                                field: 'summary'}]} ">
         </table>
     </div>
-    <!--
-    <div class = "oj-xl-4 oj-lg-4 oj-md-6 oj-flex-item">
-        <div class = "oj-flex oj-flex-items-pad">
-            <div class = "oj-flex- deprecated-col-default-width ">
-                <label for =" spinnercontrol "> Incident Id </label>
-            </div>
-            <div class = "oj-flex-item deprecated-col-default-width">
-                <input id = "incidentIdInput"
-                       data-bind = "ojComponent: {
-                       component: 'ojInputNumber',
-                       max: 2000, min: 0, step: 1, value: inputincidentId}" />
-            </div>
-        </div>
+    <div class="oj-flex-item oj-sm-only-text-align-end oj-md-4 oj-sm-12 oj-panel oj-panel-alt1">
         <div class = "oj-flex oj-flex-items-pad">
             <div class = "oj-flex-item deprecated-col-default-width">
-                <label for = "inputcontrol"> Contact </label>
-            </ div>
+                <label for = "inputcontrol">Contact</label>
+            </div>
             <div class = "oj-flex-item deprecated-col-default-width">
-                <input id = "conatctInput"
-                       data-bind = "ojComponent: {
+                <input id = "contactInput"
+                       data-bind = " ojComponent: {
                        component: 'ojInputText',
-                       value: inputFirstName} "/>
+                       value: inputcontact} "/>
             </div>
         </div>
         <div class =" oj-flex oj-flex-items-pad ">
             <div class =" oj-flex-item deprecated-col-default-width " >
-                <label for = "spinnercontrol"> contact </label>
+                <label for = "spinnercontrol">Priority </label>
             </div>
             <div class = "oj-flex-item deprecated-col-default-width">
-                <input id = "inputpriority"
+                <input id = "priorityInput"
                        data-bind = " ojComponent: {
                        component: 'ojInputText',
                        value: inputpriority} "/>
             </div>
         </div>
-        
-        <div class =" oj-flex oj -flex-items-pad ">
-            <button id =" addbutton "
-                    data-bind =" click: addRow,
-                    ojComponent: {component: 'ojButton', label: 'Add to end'} ">
+        <div class = "oj-flex oj-flex-items-pad">
+            <div class = "oj-flex-item deprecated-col-default-width">
+                <label for = "spinnercontrol">Summary </label>
+            </div>
+            <div class = "oj-flex-item deprecated-col-default-width ">
+                <input id ="summaryInput"
+                       data-bind =" ojComponent: {
+                       component: 'ojInputText',
+                       value: inputsummary} "/>
+            </div>
+        </div>
+        <div class ="oj-flex oj-flex-items-pad ">
+            <button id ="addbutton "
+                    data-bind ="click: addRow,
+                    ojComponent: {component: 'ojButton', label: 'Add to end'}">
             </button>
 
             <button id = "updateButton"
@@ -65,5 +64,9 @@
                     ojComponent: {component: 'ojButton', label: 'Remove'} ">
             </button>
         </div>
-    </div>-->
+    </div>
+    <div class="oj-flex-item oj-sm-only-text-align-end oj-md-4 oj-sm-12 oj-panel oj-panel-alt1">
+
+    </div>
 </div>
+

@@ -21,7 +21,8 @@ define(
                 var contactArray = [];
                 self.contactObservableArray = ko.observableArray(contactArray);
                // self.serviceURL = 'http://ktservice.ca-central-1.elasticbeanstalk.com/incidents/';
-               self.serviceURL = 'http://localhost:5000/incidents/';
+               //self.serviceURL = 'http://localhost:5000/incidents/';
+                 self.serviceURL='http://ktservice.ca-central-1.elasticbeanstalk.com/incidents/';
                 self.parseContact = function (response) {
                     return {incidentId: response ['incidentId'],
                         contact: response ['contact'],
